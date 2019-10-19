@@ -20,7 +20,6 @@
 
   "browser_action": {
     "browser_style": true,
-    "default_popup": "/volksverhetzung.html",
     "default_icon": {
       "19": "icons/first_logo.png"
     },
