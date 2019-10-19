@@ -12,7 +12,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.twitter.com/*"],
+      "matches": ["*://*.twitter.com/*/status/*"],
       "js": ["main.js"]
     }
   ]
