@@ -5,6 +5,9 @@
 * TODO: fix it!
 */
 
+// Variables
+var not_loaded = true;
+
 // Data
 var button;
 button = function () {
@@ -20,18 +23,9 @@ button = function () {
         '       </div>';
 };
 
-function getUrl() {
-    return window.location.href;
-}
 // Interfaces
 function AddFormInfoToSession(forming) {
     sessionStorage.setItem('c24df9856f4a06331a6ae9d9393a79b6', forming);
-}
-
-function buildInput() {
-    AddFormInfoToSession({
-        'url' : getUrl()
-    });
 }
 
 /**
@@ -41,6 +35,7 @@ function ReadFromSession(key) {
     return sessionStorage.getItem(key);
 }
 
+/*
 // Other functions
 function addChild(doc, parent, child, childText, attributes) {
     var childNode;
@@ -61,33 +56,47 @@ function addChild(doc, parent, child, childText, attributes) {
     }
     parent.appendChild(childNode);
     return childNode;
+}*/
+
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
 function placeButtonOnMainArticle() {
-    buildInput();
     console.log("Placing Button on Main Article.");
-
-   var elements = document.getElementsByClassName("r-a2tzq0");
-   // console.log(elements[0]);
-   // console.log(elements);
-   // addChild(document, elements[0], 'div', button(), {"class": "rere css-1dbjc4n r-18u37iz r-1h0z5md r-3qxfft r-h4g966 r-rjfia"}); //css-1dbjc4n r-18u37iz r-1h0z5md r-3qxfft r-h4g966 r-rjfia
-
+    var elements = document.getElementsByTagName("article");
+    console.log(elements[0]);
     console.log("Placed Button on Main article.");
 }
 
 function placeButtonOnAnswer() {
     for (var i = 0; i <= elements.length; i++) {
         console.log(i);
-
         //elements[i].innerHTML = '<p style="color: red;">Hiii!</p>';
     }
 }
 
 function placeButtons() {
-    placeButtonOnMainArticle();
+//    placeButtonOnMainArticle();
+    placeButtonInDropDown();
 }
 
-document.onload(placeButtons());
+function placeButtonInDropDown() {
+    var everyLastInDropDown = document.querySelectorAll("a[href='/robbietilton/status/1183977329661374465/hidden']");
+    console.log(everyLastInDropDown);
+    //document.getElementById("myList2").lastChild
+}
+
+var checkExist = setInterval(function() {
+        if (document.querySelectorAll("a[href='/robbietilton/status/1183977329661374465/hidden']")) {
+            console.log("Element existst.");
+            placeButtons();
+            clearInterval(checkExist);
+        }
+        console.log("Round");
+    }, 100);
+
+checkExist();
 
 /*
 *
