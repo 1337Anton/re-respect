@@ -18,3 +18,5 @@ function redirectToDZ() {
     console.log(elements);
     createSession();
 }
+
+<img onclick="redirectToDZ" id="myBtn" title="Melden" src="icons/first_logo.png"></img>
