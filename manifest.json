@@ -2,9 +2,9 @@
 
   "manifest_version": 2,
   "name": "re:respect",
-  "version": "1.2",
+  "version": "1.9",
 
-  "description": "An Firefox-Extension for searching and classifying illegal user content.",
+  "description": "re:respect ist eine Firefox-Erweiterung, die das Erstellen von Anzeigen aufgrund von rechtsradikalen Inhalten vereinfacht.",
 
   "icons": {
     "48": "icons/first_logo.png"
