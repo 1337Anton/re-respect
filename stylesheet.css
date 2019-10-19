@@ -29,7 +29,7 @@ p {
 a {
     color: #fff;
 }
-#vvh, #ueu {
+summary {
     cursor: pointer;
 }
 #myBtn {
@@ -48,4 +48,7 @@ a {
 #myBtn:hover {
     background-color: #fff;
     color: #faa200;
+}
+.ueut, .vvht {
+    cursor: text;
 }
