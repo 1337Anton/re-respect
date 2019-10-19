@@ -13,11 +13,11 @@
   "content_scripts": [
     {
       "matches": ["*://*.twitter.com/*/status/*"],
-      "js": ["jquery.js", "peace.js", "twitter.js"]
+      "js": ["jquery.js", "twitter.js"]
     },
     {
       "matches": ["https://tickets.demokratiezentrum-bw.de/open.php"],
-      "js": ["jquery.js", "peace.js", "respect.js"]
+      "js": ["jquery.js", "respect.js"]
     }
   ],
   "browser_action": {
