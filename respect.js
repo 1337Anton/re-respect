@@ -14,3 +14,14 @@ window.emailf = document.querySelectorAll("input[type=email]");
 emailf = emailf[0];
 emailf.value = email;
 
+// text fields
+window.textfs = document.querySelectorAll("input[type=text]");
+
+namef = textfs[0];
+namef.value = "Enter full name here.";
+
+titlef = textfs[2];
+titlef.value = "Enter title here.";
+
+urlf = textfs[3];
+urlf.value = url;
