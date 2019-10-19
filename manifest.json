@@ -15,6 +15,7 @@
       "matches": ["*://*.twitter.com/*/status/*"],
       "js": ["main.js"]
     }
+    
   ],
 
   "browser_action": {
