@@ -1,7 +1,33 @@
 * {
     border: none;
     outline: none;
-    font-family: 'Raleway', sans-serif, 'Sarala', sans-serif, 'Arial', sans-serif;
+    font-family: 'Sarala', sans-serif, 'Raleway', sans-serif, 'Arial', sans-serif;
+}
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+.h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 22px;
+}
+.h2 {
+    font-size: 22px;
+}
+body {
+    margin: 10px 20px;
+    background-color: #faa200;
+}
+p {
+    font-size: 1.15em;
+}
+.p {
+    font-size: 1.15em;
+}
+a {
+    color: #fff;
 }
 #myBtn {
     width: 150px;
@@ -19,10 +45,4 @@
 #myBtn:hover {
     background-color: #fff;
     color: #faa200;
-}
-body {
-    margin: 20px;
-}
-.h2 {
-    font-size: 22px;
 }
