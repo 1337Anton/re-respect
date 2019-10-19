@@ -1,11 +1,40 @@
+* {
+    border: none;
+    outline: none;
+    font-family: 'Sarala', sans-serif, 'Raleway', sans-serif, 'Arial', sans-serif;
+}
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+.h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 22px;
+}
+.h2 {
+    font-size: 22px;
+}
+body {
+    margin: 10px 20px;
+    background-color: #faa200;
+}
+p {
+    font-size: 1.15em;
+}
+.p {
+    font-size: 1.15em;
+}
+a {
+    color: #fff;
+}
 #myBtn {
     width: 150px;
     position: fixed;
     bottom: 20px;
     right: 30px;
     z-index: 99;
-    border: none;
-    outline: none;
     color: #000;
     background-color: #faa200;
     cursor: pointer;
