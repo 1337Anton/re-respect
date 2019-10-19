@@ -5,3 +5,13 @@
 * TODO: 
 */
 
+elements = document.getElementsByTagName("article");
+console.log(elements);
+/*
+*
+*  class="css-1dbjc4n r-1j3t67a"
+*
+*
+*
+*
+**/
