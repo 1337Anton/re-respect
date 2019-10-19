@@ -29,6 +29,9 @@ p {
 a {
     color: #fff;
 }
+#vvh, #ueu {
+    cursor: pointer;
+}
 #myBtn {
     width: 150px;
     position: fixed;
