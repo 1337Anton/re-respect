@@ -16,7 +16,7 @@
       "js": ["jquery.js", "twitter_new.js"]
     },
     {
-      "matches": ["*//tickets.demokratiezentrum-bw.de/open.php"],
+      "matches": ["*://tickets.demokratiezentrum-bw.de/open.php"],
       "js": ["jquery.js", "respect.js"]
     }
   ],
