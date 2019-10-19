@@ -19,4 +19,6 @@ function redirectToDZ() {
     createSession();
 }
 
-<img onclick="redirectToDZ" id="myBtn" title="Melden" src="icons/first_logo.png"></img>
+document.head.innerHTML += '<link rel="stylesheet" href="./stylesheet.css"/>';
+document.body.innerHTML += '<img onclick="redirectToDZ" id="myBtn" title="Beitrag Anzeigen" src="icons/first_logo.png"/>';
+console.log("loaded...");
