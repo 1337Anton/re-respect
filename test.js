@@ -5,11 +5,11 @@
 * TODO: 
 */
 
-var email = "ok@gmail.com"; 
+// user data
+const email = "mai@google.com";
 
-window.a = document.querySelectorAll("input[type=email]");
-b = a[0];
-b.value = email;
+// email field
+window.emailf = document.querySelectorAll("input[type=email]");
+emailf = emailf[0];
+emailf.value = email;
 
-//setInterval(function() {
-//}, 3000);
