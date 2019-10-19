@@ -15,6 +15,12 @@
       "matches": ["*://*.twitter.com/*/status/*"],
       "js": ["main.js"]
     }
-  ]
+  ],
 
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/first_logo.png"
+    },
+    "default_title": "re:respect - Diesen Tweet melden"
+  }
 }
