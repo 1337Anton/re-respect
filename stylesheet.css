@@ -1,11 +1,14 @@
+* {
+    border: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif, 'Sarala', sans-serif, 'Arial', sans-serif;
+}
 #myBtn {
     width: 150px;
     position: fixed;
     bottom: 20px;
     right: 30px;
     z-index: 99;
-    border: none;
-    outline: none;
     color: #000;
     background-color: #faa200;
     cursor: pointer;
@@ -19,4 +22,7 @@
 }
 body {
     margin: 20px;
+}
+.h2 {
+    font-size: 22px;
 }
