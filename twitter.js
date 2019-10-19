@@ -9,73 +9,30 @@
 var not_loaded = true;
 
 // Interfaces
-function AddFormInfoToSession(forming) {
-    sessionStorage.setItem('c24df9856f4a06331a6ae9d9393a79b6', forming);
+function AddToSession(key, forming) {
+    sessionStorage.setItem(key, forming);
 }
 
-/*
-// Other functions
-function addChild(doc, parent, child, childText, attributes) {
-    var childNode;
-    if (typeof child == "string") {
-        childNode = doc.createElement(child);
-    } else {
-        childNode = child;
-    }
-    if (typeof childText == "string") {
-        var childTextNode;
-        childTextNode = doc.createTextNode(childText);
-        childNode.appendChild(childTextNode);
-    }
-    if (attributes) {
-        for (var att in attributes) {
-            childNode.setAttribute(att,attributes[att]);
-        }
-    }
-    parent.appendChild(childNode);
-    return childNode;
-}*/
+function generateReport(elem_id) {
 
-function insertAfter(newNode, referenceNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+
+    // Load Data in Session
+    AddToSession('c24df9856f4a06331a6ae9d9393a79b6', window.location); // URL
+    //btoa(); => atob(decode)
+
+
 }
 
-function placeButtonOnMainArticle() {
-    console.log("Placing Button on Main Article.");
-    var elements = document.getElementsByTagName("article");
-    console.log(elements[0]);
-    console.log("Placed Button on Main article.");
+var doesElemExist = !!document.getElementById("redirectButton0");
+if (!doesElemExist) {
+    //var elements = document.getElementsByClassName("r-k200y");
+    var elements = document.getElementsByClassName("css-1dbjc4n r-18u37iz r-1wtj0ep r-zl2h9q");
+    console.log(elements);
+    elements.item(0).innerHTML += '<button id="redirectButton0" style="transform: translateX(-50px); display: flex;">Test</button>';
+    document.getElementById("reredirectButton0").addEventListener(
+        'click', generateReport("reredirectButton0")
+    );
 }
-
-function placeButtonOnAnswer() {
-    for (var i = 0; i <= elements.length; i++) {
-        console.log(i);
-        //elements[i].innerHTML = '<p style="color: red;">Hiii!</p>';
-    }
-}
-
-function placeButtons() {
-//    placeButtonOnMainArticle();
-    placeButtonInDropDown();
-}
-
-function placeButtonInDropDown() {
-    console.log("placeButtonInDropDown");
-    var everyLastInDropDown = document.querySelectorAll("a[href='/robbietilton/status/1183977329661374465/hidden']");
-    console.log(everyLastInDropDown);
-    //document.getElementById("myList2").lastChild
-}
-
-setTimeout(function() {}, 3000);
-
-function log() {
-    console.log("MOIN");
-}
-
-
-var elements = document.getElementsByClassName("r-k200y");
-elements.item(0).innerHTML += '<button style="transform: translateX(-50px)" onclick="log();">Test</button>';
-
 /*
 document.getElementsByClassName("r-podbf7").addEventListener("click", placeButtonInDropDown());
 var menuElements = document.getElementsByClassName("r-9qu9m4");
