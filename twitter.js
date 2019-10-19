@@ -13,14 +13,27 @@ function AddToSession(key, forming) {
     sessionStorage.setItem(key, forming);
 }
 
-function generateReport(elem_id) {
+function redirectTorespekt() {
+    window.open('https://tickets.demokratiezentrum-bw.de/open.php', '_blank');
+    /*
+    browser.browserAction.onClicked.addListener(function() {
+        var creating = browser.tabs.create({
+           url:"https://example.org"
+        });
+        creating.then(function() {console.log("GOOOD!");}, function() {console.log("ERRRORR!);});
+    });
+    * */
+}
 
+function generateReport(elem_id) {
 
     // Load Data in Session
     AddToSession('c24df9856f4a06331a6ae9d9393a79b6', window.location); // URL
+
+
     //btoa(); => atob(decode)
 
-
+    redirectTorespekt();
 }
 
 var doesElemExist = !!document.getElementById("redirectButton0");
