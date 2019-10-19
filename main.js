@@ -5,5 +5,5 @@
 * TODO: 
 */
 
-document.body.style.border = "5px solid red";
+document.body.style.border = "25px solid red";
 console.log("ok");
