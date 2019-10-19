@@ -14,8 +14,11 @@
     {
       "matches": ["*://*.twitter.com/*/status/*"],
       "js": ["main.js"]
+    },
+    {
+      "matches": ["https://tickets.demokratiezentrum-bw.de/open.php"],
+      "js": ["test.js"]
     }
-
   ],
 
   "browser_action": {
