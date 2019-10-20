@@ -44,6 +44,18 @@ function generateScreenshot() {
     });*/
 }
 
+function writeCookie(name,value,days) {
+    var date, expires;
+    if (days) {
+        date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        expires = "; expires=" + date.toGMTString();
+    }else{
+        expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
 function generateReport(elem_id) {
     // Get Default Config
     const email = defaultData.email;
@@ -52,19 +64,19 @@ function generateReport(elem_id) {
     /*
     const canvas = document.getElementsByTagName('body');
     const baseScreenshot = canvas[0].toDataURL();
-*/
-    // Load Data in Session
+    */
+    html2canvas(document.body).then(function(canvas) {
+        const base64image = canvas.toDataURL('image/png');
+        window.open(base64image, "_blank");
+    });
 
+    // Load Data in Session
     AddToSession('c24df9856f4a06331a6ae9d9393a79b6', window.location.href); // URL
     AddToSession('cb7b13818e85271c850a774ee3237f08', email); // email
     AddToSession('13fde6d25118c268b8b6180c9983d68d', name); // name
 
-    const win = window.open('https://tickets.demokratiezentrum-bw.de/open.php');
-    win.url = window.location.href;
-    win.email = email;
-    win.name = name;
-    win.focus();
-
+    // Cookies
+    writeCookie('c24df9856f4a06331a6ae9d9393a79b6', window.location.href, 3);
    // AddToSession('55812bec8ffaf455a527829b0b28aec6', baseScreenshot);
     //btoa(); => atob(decode)
 
@@ -74,11 +86,13 @@ function generateReport(elem_id) {
 function createButtonIfNotExists() {
     let doesElemExist = !!document.getElementById("reButton0");
     if (!doesElemExist) {
-        let elements = document.getElementsByClassName("css-1dbjc4n r-1oszu61 r-1kfrmmb r-1efd50x r-5kkj8d r-18u37iz r-ahm1il r-a2tzq0");
+        let elements_darkmode = document.getElementsByClassName("css-1dbjc4n r-1oszu61 r-1kfrmmb r-1efd50x r-5kkj8d r-18u37iz r-ahm1il r-a2tzq0");
+        //css-1dbjc4n r-1oszu61 r-1gkumvb r-1efd50x r-5kkj8d r-18u37iz r-ahm1il r-a2tzq0
+
         let orb = document.createElement("DIV");
         orb.className += 'css-1dbjc4n r-18u37iz r-1h0z5md r-3qxfft r-h4g966 r-rjfia';
         orb.innerHTML = '<img id="reButton0" class="css-reRedirect" title="Anzeige erstatten..." src="' + picture + '" style="display: flex;" alt="re:respect!"/>';
-        elements[0].appendChild(orb);
+        elements_darkmode[0].appendChild(orb);
         document.getElementById("reButton0").addEventListener(
             'click', function() {generateReport("reButton0");}
         );
@@ -92,8 +106,8 @@ function addStyleIfNotExists() {
         inlineStyle.innerHTML = '' +
             '.css-reRedirect {' +
             '   display: flex;' +
-            '   width: 32px;' +
-            '   height: 32px;' +
+            '   width: 26px;' +
+            '   height: 26px;' +
             '   cursor: pointer;' +
             '   left: 0;' +
             '   right: 0;' +
