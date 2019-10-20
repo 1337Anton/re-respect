@@ -45,12 +45,13 @@ urlf.value = url;
 window.textareaf = document.getElementsByClassName("redactor-editor redactor-linebreaks");
 textareaf = textareaf[0];
 textareaf.click();
-textareaf.innerText = "Text here";
+var date = new Date();
+textareaf.innerText = "Dieser Post stammt von Twitter. Letzer Zugriff am " + date + ". Dieser Beitrag ist meiner Ansicht nach volksverhetzend und sollte strafrechtich verfolgt werden." ;
 
 // image
 window.imgf = document.querySelectorAll("input[type=file]");
 imgf = imgf[0];
-//imgf.click();
+imgf.click();
 
 // scroll to
 window.scrollObj = document.getElementsByClassName("form-group required");
