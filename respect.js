@@ -15,16 +15,16 @@ const url = sessionStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
 // email field
 window.emailf = document.querySelectorAll("input[type=email]");
 emailf = emailf[0];
-emailf.value = "mail@gmail.com";
+emailf.value = email;
 
 // text fields
 window.textfs = document.querySelectorAll("input[type=text]");
 
 namef = textfs[0];
-namef.value = "Enter full name here.";
+namef.value = name;
 
 titlef = textfs[2];
-titlef.value = "Enter title here.";
+titlef.value = "Volksverhetzung auf Twitter";
 
 urlf = textfs[3];
 urlf.value = url;
@@ -34,6 +34,11 @@ window.textareaf = document.getElementsByClassName("redactor-editor redactor-lin
 textareaf = textareaf[0];
 textareaf.click();
 textareaf.innerText = "Text here";
+
+// image
+window.imgf = document.querySelectorAll("input[type=file]");
+imgf = imgf[0];
+imgf.click();
 
 // scroll to
 window.scrollObj = document.getElementsByClassName("form-group required");
