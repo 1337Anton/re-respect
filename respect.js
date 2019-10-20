@@ -20,9 +20,9 @@ function findGetParameter(parameterName) {
         });
     return result;
 }
-url = findGetParameter("url");
-email = findGetParameter("email");
-name = findGetParameter("name");
+var url = findGetParameter("url");
+var email = findGetParameter("email");
+var name = findGetParameter("name");
 
 // email field
 window.emailf = document.querySelectorAll("input[type=email]");
