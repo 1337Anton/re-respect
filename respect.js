@@ -19,9 +19,9 @@ function newTab(url) {
 //const name = sessionStorage.getItem("13fde6d25118c268b8b6180c9983d68d");
 //const url = sessionStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
 
-var url = window.opener.url
-var email = window.opener.email
-var name = window.opener.name
+var url = window.opener.url;
+var email = window.opener.email;
+var name = window.opener.name;
 console.log(name);
 
 // email field
