@@ -20,7 +20,10 @@ const names = sessionStorage.getItem("13fde6d25118c268b8b6180c9983d68d");
 console.log(names);
 const urls = sessionStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
 
-var url = window.opener.url;
+
+
+var url = localStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
+console.log(url);
 var email = window.opener.email;
 var name = window.opener.name;
 console.log(name);
@@ -65,5 +68,3 @@ $(document).ready(function() {
         scrollTop: $(scrollObj).offset().top
     }, 'slow');
 });
-
-newTab("https://antonrave.de/");
