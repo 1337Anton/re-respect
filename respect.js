@@ -6,11 +6,9 @@
 */
 
 // user data
-const url = localStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
-console.log(url);
 
 // GET
-let get = window.location.search.substr(1);
+get = window.location.search.substr(1);
 console.log(get);
 
 // email field
