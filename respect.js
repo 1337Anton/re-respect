@@ -64,10 +64,10 @@ window.scrollObj = document.getElementsByClassName("form-group required");
 console.log(scrollObj);
 scrollObj = scrollObj[5];
 
-
 $(document).ready(function() {
     // Handler for .ready() called.
     $('html, body').animate({
         scrollTop: $(scrollObj).offset().top
     }, 'slow');
 });
+//ok
