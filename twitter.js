@@ -14,7 +14,7 @@ function AddToSession(key, forming) {
 }
 
 function redirectTorespekt() {
-    window.open('https://tickets.demokratiezentrum-bw.de/open.php', '_blank');
+    window.open('https://tickets.demokratiezentrum-bw.de/open.php');
     /*
     browser.browserAction.onClicked.addListener(function() {
         var creating = browser.tabs.create({
@@ -36,18 +36,48 @@ function generateReport(elem_id) {
     redirectTorespekt();
 }
 
-//Main Loop
-setInterval(function() {
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+function createButtonIfNotExists() {
     let doesElemExist = !!document.getElementById("reButton0");
     if (!doesElemExist) {
-        //var elements = document.getElementsByClassName("r-k200y");
-        let elements = document.getElementsByClassName("css-1dbjc4n r-18u37iz r-1wtj0ep r-zl2h9q");
-        console.log(elements);
-        elements.item(0).innerHTML = '<img id="reButton0" class="css-reRedirect" width="64px" src="' + picture + '" style="display: flex;" alt="respekt!"/>' + elements.item(0).innerHTML;
+        let elements = document.getElementsByClassName("css-1dbjc4n r-1oszu61 r-1kfrmmb r-1efd50x r-5kkj8d r-18u37iz r-ahm1il r-a2tzq0");
+        let orb = document.createElement("DIV");
+        orb.className += 'css-1dbjc4n r-18u37iz r-1h0z5md r-3qxfft r-h4g966 r-rjfia';
+        orb.innerHTML = '<img id="reButton0" class="css-reRedirect" src="' + picture + '" style="display: flex;" alt="respekt!"/>';
+        elements[0].appendChild(orb);
         document.getElementById("reButton0").addEventListener(
             'click', function() {generateReport("reButton0");}
         );
     }
+}
+
+function addStyleIfNotExists() {
+    if (!document.getElementById('reRedirectStyle')) {
+        let inlineStyle = document.createElement("STYLE");
+        inlineStyle.id = 'reRedirectStyle';
+        inlineStyle.innerHTML = '' +
+            '.css-reRedirect {' +
+            '   display: flex;' +
+            '   width: 32px;' +
+            '   height: 32px;' +
+            '   left: 0;' +
+            '   right: 0;' +
+            '   top: 0;' +
+            '   bottom: 0;' +
+            '   transform: translateY(8px)' +
+            '}' +
+            '';
+        document.head.appendChild(inlineStyle);
+    }
+}
+
+//Main Loop
+setInterval(function() {
+    addStyleIfNotExists();
+    createButtonIfNotExists();
 }, 500);
 
 /*
