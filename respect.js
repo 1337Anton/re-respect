@@ -5,31 +5,11 @@
 * TODO: 
 */
 
-function newTab(url) {
-    var form = document.createElement("form");
-    form.method = "GET";
-    form.action = url;
-    form.target = "_blank";
-    document.body.appendChild(form);
-    form.submit();
-}
-
 // user data
-function readCookie(name) {
-    var i, c, ca, nameEQ = name + "=";
-    ca = document.cookie.split(';');
-    for(i=0;i < ca.length;i++) {
-        c = ca[i];
-        while (c.charAt(0)==' ') {
-            c = c.substring(1,c.length);
-        }
-        if (c.indexOf(nameEQ) == 0) {
-            return c.substring(nameEQ.length,c.length);
-        }
-    }
-    return '';
-}
-var sc24df9856f4a06331a6ae9d9393a79b6 = readCookie("url");
+const url = sessionStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
+console.log(url);
+alert(url);
+
 
 // email field
 window.emailf = document.querySelectorAll("input[type=email]");
