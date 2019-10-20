@@ -6,9 +6,8 @@
 */
 
 // user data
-const url = sessionStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
+const url = localStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
 console.log(url);
-alert(url);
 
 
 // email field
