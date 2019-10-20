@@ -12,13 +12,11 @@ const defaultData = {
 
 // Interfaces
 function AddToSession(key, forming) {
-    sessionStorage.setItem(key, forming);
+    localStorage.setItem(key, forming);
 }
 
 function redirectTorespekt() {
-    const win = window.open('https://tickets.demokratiezentrum-bw.de/open.php');
-    win.test = "Hallo";
-    win.focus();
+    window.open("https://tickets.demokratiezentrum-bw.de/open.php?id=test", "_self");
     /*
     browser.browserAction.onClicked.addListener(function() {
         var creating = browser.tabs.create({
@@ -66,7 +64,10 @@ function generateReport(elem_id) {
     // AddToSession('55812bec8ffaf455a527829b0b28aec6', baseScreenshot);
     //btoa(); => atob(decode)
 
-    redirectTorespekt();
+
+    window.open("https://tickets.demokratiezentrum-bw.de/open.php?url="+window.location.href+"&email="+email+"&name="+name+"", "_self");
+
+    //redirectTorespekt();
 }
 
 function createButtonIfNotExists() {

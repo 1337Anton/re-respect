@@ -17,7 +17,7 @@
     },
     {
       "matches": ["*://tickets.demokratiezentrum-bw.de/open.php"],
-      "js": ["jquery.js", "respect.js"]
+      "js": ["respect.js"]
     }
   ],
   "browser_action": {

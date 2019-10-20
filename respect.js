@@ -9,6 +9,9 @@
 const url = localStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
 console.log(url);
 
+// GET
+let get = window.location.search.substr(1);
+console.log(get);
 
 // email field
 window.emailf = document.querySelectorAll("input[type=email]");
@@ -43,10 +46,3 @@ window.scrollObj = document.getElementsByClassName("form-group required");
 console.log(scrollObj);
 scrollObj = scrollObj[5];
 
-$(document).ready(function() {
-    // Handler for .ready() called.
-    $('html, body').animate({
-        scrollTop: $(scrollObj).offset().top
-    }, 'slow');
-});
-//ok
