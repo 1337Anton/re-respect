@@ -5,11 +5,6 @@
 * TODO: 
 */
 
-function pageScroll() {
-    window.scrollBy(0,1);
-    scrolldelay = setTimeout(pageScroll,10);
-}
-
 // user data
 const email = sessionStorage.getItem("cb7b13818e85271c850a774ee3237f08");
 const url = sessionStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
@@ -34,9 +29,18 @@ urlf.value = "url";
 // text area
 window.textareaf = document.getElementsByClassName("redactor-editor redactor-linebreaks");
 textareaf = textareaf[0];
-console.log(textareaf);
 textareaf.click();
 textareaf.innerText = "Text here";
 
-pageScroll();
+// scroll to
+window.scrollObj = document.getElementsByClassName("form-group required");
+console.log(scrollObj);
+scrollObj = scrollObj[5];
 
+
+$(document).ready(function() {
+    // Handler for .ready() called.
+    $('html, body').animate({
+        scrollTop: $(scrollObj).offset().top
+    }, 'slow');
+});
