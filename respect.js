@@ -24,7 +24,7 @@ titlef = textfs[2];
 titlef.value = "Enter title here.";
 
 urlf = textfs[3];
-urlf.value = "url";
+urlf.value = url;
 
 // text area
 window.textareaf = document.getElementsByClassName("redactor-editor redactor-linebreaks");
