@@ -8,8 +8,21 @@
 // user data
 
 // GET
-get = window.location.search.substr(1);
-console.log(get);
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
+url = findGetParameter("url");
+email = findGetParameter("email");
+name = findGetParameter("name");
 
 // email field
 window.emailf = document.querySelectorAll("input[type=email]");
