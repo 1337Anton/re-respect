@@ -29,7 +29,7 @@ function readCookie(name) {
     }
     return '';
 }
-var sId = readCookie('url');
+var sc24df9856f4a06331a6ae9d9393a79b6 = readCookie("url");
 
 // email field
 window.emailf = document.querySelectorAll("input[type=email]");
@@ -57,7 +57,7 @@ textareaf.innerText = "Text here";
 // image
 window.imgf = document.querySelectorAll("input[type=file]");
 imgf = imgf[0];
-imgf.click();
+//imgf.click();
 
 // scroll to
 window.scrollObj = document.getElementsByClassName("form-group required");
