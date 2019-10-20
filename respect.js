@@ -46,7 +46,7 @@ window.textareaf = document.getElementsByClassName("redactor-editor redactor-lin
 textareaf = textareaf[0];
 textareaf.click();
 var date = new Date();
-textareaf.innerText = "Dieser Post stammt von Twitter. Letzer Zugriff am " + date + ". Dieser Beitrag ist meiner Ansicht nach volksverhetzend und sollte strafrechtich verfolgt werden." ;
+textareaf.innerText = "Dieser Post stammt von Twitter. Letzer Zugriff am " + date + ". Dieser Beitrag ist meiner Ansicht nach volksverhetzend und sollte strafrechtich verfolgt werden.";
 
 // image
 window.imgf = document.querySelectorAll("input[type=file]");
