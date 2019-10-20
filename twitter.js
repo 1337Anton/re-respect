@@ -12,7 +12,7 @@ const defaultData = {
 
 // Interfaces
 function AddToSession(key, forming) {
-    localStorage.setItem(key, forming);
+    sessionStorage.setItem(key, forming);
 }
 
 function redirectTorespekt() {
@@ -44,18 +44,6 @@ function generateScreenshot() {
     });*/
 }
 
-function writeCookie(name,value,days) {
-    var date, expires;
-    if (days) {
-        date = new Date();
-        date.setTime(date.getTime()+(days*24*60*60*1000));
-        expires = "; expires=" + date.toGMTString();
-    }else{
-        expires = "";
-    }
-    document.cookie = name + "=" + value + expires + "; path=/";
-}
-
 function generateReport(elem_id) {
     // Get Default Config
     const email = defaultData.email;
@@ -64,20 +52,18 @@ function generateReport(elem_id) {
     /*
     const canvas = document.getElementsByTagName('body');
     const baseScreenshot = canvas[0].toDataURL();
-    */
+
     html2canvas(document.body).then(function(canvas) {
         const base64image = canvas.toDataURL('image/png');
         window.open(base64image, "_blank");
-    });
+    });*/
 
     // Load Data in Session
     AddToSession('c24df9856f4a06331a6ae9d9393a79b6', window.location.href); // URL
     AddToSession('cb7b13818e85271c850a774ee3237f08', email); // email
     AddToSession('13fde6d25118c268b8b6180c9983d68d', name); // name
 
-    // Cookies
-    writeCookie('c24df9856f4a06331a6ae9d9393a79b6', window.location.href, 3);
-   // AddToSession('55812bec8ffaf455a527829b0b28aec6', baseScreenshot);
+    // AddToSession('55812bec8ffaf455a527829b0b28aec6', baseScreenshot);
     //btoa(); => atob(decode)
 
     redirectTorespekt();
