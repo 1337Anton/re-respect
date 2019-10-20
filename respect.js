@@ -15,18 +15,21 @@ function newTab(url) {
 }
 
 // user data
-const emails = sessionStorage.getItem("cb7b13818e85271c850a774ee3237f08");
-const names = sessionStorage.getItem("13fde6d25118c268b8b6180c9983d68d");
-console.log(names);
-const urls = sessionStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
-
-
-
-var url = localStorage.getItem("c24df9856f4a06331a6ae9d9393a79b6");
-console.log(url);
-var email = window.opener.email;
-var name = window.opener.name;
-console.log(name);
+function readCookie(name) {
+    var i, c, ca, nameEQ = name + "=";
+    ca = document.cookie.split(';');
+    for(i=0;i < ca.length;i++) {
+        c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1,c.length);
+        }
+        if (c.indexOf(nameEQ) == 0) {
+            return c.substring(nameEQ.length,c.length);
+        }
+    }
+    return '';
+}
+var sId = readCookie('url');
 
 // email field
 window.emailf = document.querySelectorAll("input[type=email]");
