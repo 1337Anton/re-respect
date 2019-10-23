@@ -10,7 +10,7 @@
 // GET
 var api_data;
 function getUserIpAPI() {
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://ipapi.co/json/', true);
 
     // If specified, responseType must be empty string or "text"
@@ -20,7 +20,7 @@ function getUserIpAPI() {
         if (xhr.readyState === xhr.DONE) {
             if (xhr.status === 200) {
                 var api_data = JSON.parse(xhr.responseText);
-                console.log(api_data);
+                console.log(api_data + " 0");
             }
         } else {
             console.log("error");
@@ -28,7 +28,12 @@ function getUserIpAPI() {
     };
 
     xhr.send(null);
+    console.log(api_data + " 1");
 }
+// bitte BITTE
+getUserIpAPI();
+console.log(api_data + " 2");
+
 
 function findGetParameter(parameterName) {
     var result = null,
@@ -88,6 +93,3 @@ $(document).ready(function () {
         scrollTop: $(scrollObj).offset().top
     }, 'slow');
 });
-
-// bitte BITTE
-getUserIpAPI();
