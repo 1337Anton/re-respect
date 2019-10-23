@@ -24,7 +24,7 @@ function getIpAPI() {
     api_request.send();
 
     var response = api_request.responseText;
-    data = JSON.parse(response);
+    var data = JSON.parse(response);
     console.log(data);
 }
  
