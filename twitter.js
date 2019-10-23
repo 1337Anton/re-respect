@@ -93,20 +93,21 @@ function addStyleIfNotExists() {
         inlineStyle.innerHTML = '' +
             '.css-reRedirect {' +
             '   display: flex;' +
-            '   width: 26px;' +
-            '   height: 26px;' +
+            '   width: 24px;' +
+            '   height: 24px;' +
             '   cursor: pointer;' +
             '   left: 0;' +
             '   right: 0;' +
             '   top: 0;' +
             '   bottom: 0;' +
-            '   transform: translateY(5px);' +
+            '   transform: translateY(10px);' +
             '   border-radius: 50%;' +
             '   border: 3px solid rgba(0,0,0,0);' +
             '   transition: all 0.2s ease-in-out;' +
             '}' +
             '.css-reRedirect:hover {' +
             '   background: rgba(120,120,120,0.5);' +
+            '   color: #faa200;' +
             '   border: 3px solid rgba(200,200,200,0.4);' +
             '}';
         document.head.appendChild(inlineStyle);
