@@ -15,7 +15,7 @@ function AddToSession(key, forming) {
     localStorage.setItem(key, forming);
 }
 
-function redirectTorespekt() {
+function redirectTorespect() {
     window.open("https://tickets.demokratiezentrum-bw.de/open.php?id=test", "_self");
     /*
     browser.browserAction.onClicked.addListener(function() {
@@ -67,7 +67,7 @@ function generateReport(elem_id) {
 
     window.open("https://tickets.demokratiezentrum-bw.de/open.php?url="+window.location.href+"&email="+email+"&name="+name+"", "_self");
 
-    //redirectTorespekt();
+    //redirectTorespect();
 }
 
 function createButtonIfNotExists() {
