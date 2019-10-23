@@ -17,13 +17,13 @@ function AddToSession(key, forming) {
 
 
 function getIpAPI() {
-    var request = new XMLHttpRequest()
-    var url = "http://ip-api.com/json/";
+    var api_request = new XMLHttpRequest()
+    var api_url = "http://ip-api.com/json/";
 
-    request.open("Get", url, false);
-    request.send();
+    api_request.open("GET", api_url, false);
+    api_request.send();
 
-    var response = request.responseText;
+    var response = api_request.responseText;
     data = JSON.parse(response);
     console.log(data);
 }
