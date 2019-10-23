@@ -126,11 +126,12 @@ function addStyleIfNotExists() {
     }
 }
 
+getIpAPI();
+
 //Main Loop
 setInterval(function() {
     addStyleIfNotExists();
     createButtonIfNotExists();
-    getIpAPI();
 }, 500);
 
 /*
