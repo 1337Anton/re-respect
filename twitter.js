@@ -78,7 +78,7 @@ function createButtonIfNotExists() {
 
         let orb = document.createElement("DIV");
         orb.className += 'css-1dbjc4n r-18u37iz r-1h0z5md r-3qxfft r-h4g966 r-rjfia';
-        orb.innerHTML = '<img id="reButton0" class="css-reRedirect" title="Anzeige erstatten..." src="' + picture + '" style="display: flex;" alt="re:respect!"/>';
+        orb.innerHTML = '<img id="reButton0" class="css-reRedirect" title="re:respect: Anzeige erstatten" src="' + picture + '" style="display: flex;" alt="re:respect!"/>';
         elements_darkmode[0].appendChild(orb);
         document.getElementById("reButton0").addEventListener(
             'click', function() {generateReport("reButton0");}
@@ -107,7 +107,6 @@ function addStyleIfNotExists() {
             '}' +
             '.css-reRedirect:hover {' +
             '   background: rgba(120,120,120,0.5);' +
-            '   color: #faa200;' +
             '   border: 3px solid rgba(200,200,200,0.4);' +
             '}';
         document.head.appendChild(inlineStyle);
