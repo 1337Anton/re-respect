@@ -15,6 +15,19 @@ function AddToSession(key, forming) {
     localStorage.setItem(key, forming);
 }
 
+
+function getIpAPI() {
+    var request = new XMLHttpRequest()
+    var url = "http://ip-api.com/json/";
+
+    request.open("Get", url, false);
+    request.send();
+
+    var response = request.responseText;
+    data = JSON.parse(response);
+    console.log(data);
+}
+ 
 function redirectTorespect() {
     window.open("https://tickets.demokratiezentrum-bw.de/open.php?id=test", "_self");
     /*
@@ -117,6 +130,7 @@ function addStyleIfNotExists() {
 setInterval(function() {
     addStyleIfNotExists();
     createButtonIfNotExists();
+    getIpAPI();
 }, 500);
 
 /*
