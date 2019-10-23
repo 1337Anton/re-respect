@@ -20,6 +20,31 @@ function findGetParameter(parameterName) {
         });
     return result;
 }
+
+var api_data;
+console.log(api_data);
+
+function getIpAPI() {
+    const api_request = new XMLHttpRequest()
+    var api_url = "https://ipapi.co/json/";
+
+    api_request.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var api_response = this.responseText;
+            var api_data = JSON.parse(api_response);
+            console.log(api_data);
+        } else {
+            console.log("Nope");
+        }
+    };
+
+    api_request.open('GET', api_url);
+    api_request.send();
+}
+
+var api_data;
+console.log(api_data);
+
 var url = findGetParameter("url");
 var email = findGetParameter("email");
 var name = findGetParameter("name");
