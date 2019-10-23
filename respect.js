@@ -8,6 +8,28 @@
 // user data
 
 // GET
+var api_data;
+function getUserIpAPI() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://ipapi.co/json/', true);
+
+    // If specified, responseType must be empty string or "text"
+    xhr.responseType = 'text';
+
+    xhr.onload = function () {
+        if (xhr.readyState === xhr.DONE) {
+            if (xhr.status === 200) {
+                var api_data = JSON.parse(xhr.responseText);
+                console.log(api_data);
+            }
+        } else {
+            console.log("error");
+        }
+    };
+
+    xhr.send(null);
+}
+
 function findGetParameter(parameterName) {
     var result = null,
         tmp = [];
@@ -21,29 +43,7 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-var api_data;
-console.log(api_data);
 
-function getIpAPI() {
-    const api_request = new XMLHttpRequest()
-    var api_url = "https://ipapi.co/json/";
-
-    api_request.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var api_response = this.responseText;
-            var api_data = JSON.parse(api_response);
-            console.log(api_data);
-        } else {
-            console.log("Nope");
-        }
-    };
-
-    api_request.open('GET', api_url);
-    api_request.send();
-}
-
-var api_data;
-console.log(api_data);
 
 var url = findGetParameter("url");
 var email = findGetParameter("email");
@@ -80,7 +80,6 @@ imgf.click();
 
 // scroll to
 window.scrollObj = document.getElementsByClassName("form-group required");
-console.log(scrollObj);
 scrollObj = scrollObj[5];
 
 $(document).ready(function () {
@@ -89,3 +88,6 @@ $(document).ready(function () {
         scrollTop: $(scrollObj).offset().top
     }, 'slow');
 });
+
+// bitte BITTE
+getUserIpAPI();
