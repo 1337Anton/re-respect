@@ -13,7 +13,7 @@ Projektpräsentation auf [media.ccc.de](https://media.ccc.de/v/jh19-hd-1013-re_r
 Das primäre Ziel dieses Projekts ist eine allgemeine Verbesserung der Umgangsweise im Internet/World Wide Web.
 
 ## Umsetzung
-In der aktuellen Version (2.0-Alpha) wurde erfolgreich die Implementierung für den Kurznachrichtendienst "Twitter" vorgenommen und auf ein funktionales Level gebracht. Dabei wird beim Öffnen eines Beitrags ein Button hinzugefügt, welcher die Funktion der Anzeigenerstattung bei "respekt!" mit einer einfachen One-Click-Action liefert.
+In der aktuellen Version (2.2-Alpha) wurde erfolgreich die Implementierung für den Kurznachrichtendienst "Twitter" vorgenommen und auf ein funktionales Level gebracht. Dabei wird beim Öffnen eines Beitrags ein Button hinzugefügt, welcher die Funktion der Anzeigenerstattung bei "respekt!" mit einer einfachen One-Click-Action liefert.
 
 Mit dem Drücken des Buttons werden zuerzeit fast alle benötigten Informationen selektiert und an "demokratiezentrum-bw.de" weitergeleitet. Dort angekommen werden diese Informationen in das gegebene Formular gefüllt.
 
