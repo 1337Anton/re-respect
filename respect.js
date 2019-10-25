@@ -5,9 +5,10 @@
 * TODO: 
 */
 
-// user data
 
-// GET
+// GET DATA
+
+// GET IP
 var api_data;
 function getUserIpAPI() {
     const xhr = new XMLHttpRequest();
@@ -30,11 +31,10 @@ function getUserIpAPI() {
     xhr.send(null);
     console.log(api_data + " 1");
 }
-// bitte BITTE
 getUserIpAPI();
 console.log(api_data + " 2");
 
-
+// GET URL variables
 function findGetParameter(parameterName) {
     var result = null,
         tmp = [];
@@ -48,11 +48,13 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-
-
+// define these variables
 var url = findGetParameter("url");
 var email = findGetParameter("email");
 var name = findGetParameter("name");
+
+
+// GET AND IDENTIFY FORM ITEMS
 
 // email field
 window.emailf = document.querySelectorAll("input[type=email]");
@@ -62,12 +64,15 @@ emailf.value = email;
 // text fields
 window.textfs = document.querySelectorAll("input[type=text]");
 
+// full name
 namef = textfs[0];
 namef.value = name;
 
+// title
 titlef = textfs[2];
 titlef.value = "Volksverhetzung auf Twitter";
 
+// url
 urlf = textfs[3];
 urlf.value = url;
 
@@ -83,12 +88,12 @@ window.imgf = document.querySelectorAll("input[type=file]");
 imgf = imgf[0];
 imgf.click();
 
-// scroll to
+// accept policy
 window.scrollObj = document.getElementsByClassName("form-group required");
 scrollObj = scrollObj[5];
 
+// scroll to policy on page load
 $(document).ready(function () {
-    // Handler for .ready() called.
     $('html, body').animate({
         scrollTop: $(scrollObj).offset().top
     }, 'slow');

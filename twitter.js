@@ -2,8 +2,9 @@
 * <re:respect>
 * Jugend hackt
 * Autoren: Anton, Manolo, Björn, Felix 
-* TODO: fix it!
+* TODO: 
 */
+
 // Default data
 const defaultData = {
     "name": "Max Mustermann",
@@ -14,7 +15,6 @@ const defaultData = {
 function AddToSession(key, forming) {
     localStorage.setItem(key, forming);
 }
-
  
 function redirectTorespect() {
     window.open("https://tickets.demokratiezentrum-bw.de/open.php?id=test", "_self");
