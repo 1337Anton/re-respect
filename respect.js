@@ -24,15 +24,13 @@ function getUserIpAPI() {
                 console.log(api_data + " 0");
             }
         } else {
-            console.log("error");
+            console.log("Fehler beim Laden relevanter Informationen: " + xhr.status);
         }
     };
 
     xhr.send(null);
-    console.log(api_data + " 1");
 }
 getUserIpAPI();
-console.log(api_data + " 2");
 
 // GET URL variables
 function findGetParameter(parameterName) {
