@@ -54,6 +54,7 @@ re-respect
 
 ## Links
 [Development Practices](https://extensionworkshop.com/documentation/publish/add-on-policies#development-practices)
+[Security Best Practices](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/)
 [Sicherheitsleitfaden bei Erweiterungen](https://developer.mozilla.org/de/docs/Mozilla/Add-ons/Security_best_practices_in_extensions)  
 [Benutzung von JS Code Modulen](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using)
 
